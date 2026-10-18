@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - QIVO: 8 Ball Pool Billiards</title>
+    <meta name="description" content="Official Privacy Policy and Terms of Service for QIVO: 8 Ball Pool Billiards. Transparent data handling, Apple StoreKit compliance, and GDPR/CCPA protection.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFD700;
+            --primary-glow: rgba(255, 215, 0, 0.35);
+            --secondary: #00E5FF;
+            --accent-green: #00E676;
+            --bg: #070B14;
+            --surface: #0F172A;
+            --surface-card: #141F36;
+            --border: rgba(255, 215, 0, 0.22);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
+            --text-dim: #64748B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 24px 16px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(20, 43, 92, 0.45) 0%, transparent 60%),
+                radial-gradient(circle at 100% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        body.lang-ar {
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar & Language Switcher */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 12px 20px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+        }
+
+        .brand-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 4px;
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .lang-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #070B14;
+            box-shadow: 0 2px 10px var(--primary-glow);
+        }
+
+        /* Hero Header */
+        .hero {
+            text-align: center;
+            padding: 40px 24px 32px;
+            background: linear-gradient(180deg, var(--surface) 0%, rgba(15, 23, 42, 0.6) 100%);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 120px;
+            background: var(--primary);
+            filter: blur(90px);
+            opacity: 0.22;
+            pointer-events: none;
+        }
+
+        .app-icon-wrap {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 24px;
+            padding: 4px;
+            background: linear-gradient(135deg, #FFD700, #FF8F00, #00E5FF);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-icon {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            display: block;
+            background: #0B1224;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .subtitle {
+            color: var(--secondary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .meta-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .tag.highlight {
+            border-color: rgba(255, 215, 0, 0.4);
+            color: var(--primary);
+            background: rgba(255, 215, 0, 0.08);
+        }
+
+        /* Highlights Grid */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .highlight-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 6px;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Content Container */
+        .content-box {
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-num {
+            background: linear-gradient(135deg, var(--primary), #FF8F00);
+            color: #070B14;
+            font-weight: 900;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #FFF;
+            margin: 16px 0 8px;
+        }
+
+        p {
+            color: #CBD5E1;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 0.92rem;
+            color: #E2E8F0;
+        }
+
+        body.lang-ar li {
+            padding-left: 0;
+            padding-right: 24px;
+        }
+
+        li::before {
+            content: '🎱';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.75rem;
+        }
+
+        body.lang-ar li::before {
+            left: auto;
+            right: 0;
+        }
+
+        /* Callout Box */
+        .callout {
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .callout.gold {
+            background: rgba(255, 215, 0, 0.08);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .callout.gold .callout-title {
+            color: var(--primary);
+        }
+
+        .callout p {
+            margin: 0;
+            font-size: 0.88rem;
+        }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .data-table th, .data-table td {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        body.lang-ar .data-table th,
+        body.lang-ar .data-table td {
+            text-align: right;
+        }
+
+        .data-table th {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .data-table td {
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid var(--border-subtle);
+            color: #CBD5E1;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        /* Language visibility toggling */
+        .content-ar {
+            display: none;
+        }
+        body.lang-ar .content-en {
+            display: none;
+        }
+        body.lang-ar .content-ar {
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            .content-box {
+                padding: 24px 18px;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero {
+                padding: 28px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Top Nav & Language Switcher -->
+        <nav class="top-nav">
+            <div class="brand-badge">
+                <span>🎱</span> QIVO PRIVACY PORTAL
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
+                <button class="lang-btn" id="btn-ar" onclick="setLang('ar')">العربية</button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="app-icon-wrap">
+                <img src="./app_icon.png" alt="QIVO 8 Ball Pool Icon" class="app-icon" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/ferdayounes-oss/qivo-privacy-policy/main/app_icon.png';">
+            </div>
+            <h1 class="content-en">QIVO: 8 Ball Pool Billiards</h1>
+            <h1 class="content-ar">كيفو: بلياردو 8 كرات (QIVO)</h1>
+
+            <p class="subtitle content-en">Official Privacy Policy & Legal Terms</p>
+            <p class="subtitle content-ar">سياسة الخصوصية الرسمية والشروط القانونية</p>
+
+            <div class="meta-tags">
+                <span class="tag highlight">
+                    <span class="content-en">Verified for Apple App Store & Google Play</span>
+                    <span class="content-ar">معتمد لـ App Store و Google Play</span>
+                </span>
+                <span class="tag">
+                    <span class="content-en">Effective Date: October 2026</span>
+                    <span class="content-ar">تاريخ السريان: أكتوبر 2026</span>
+                </span>
+                <span class="tag">
+                    <span class="content-en">Version 1.0.0</span>
+                    <span class="content-ar">الإصدار 1.0.0</span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Key Highlights Grid -->
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <span class="card-icon">🛡️</span>
+                <div class="card-title content-en">Zero Ads Tracking</div>
+                <div class="card-title content-ar">دون أي تتبع إعلاني</div>
+                <div class="card-desc content-en">We never sell, rent, or monetize your personal identity to advertising networks.</div>
+                <div class="card-desc content-ar">لا نقوم أبداً ببيع أو تأجير بياناتك لأي شبكات إعلانية أو وسطاء.</div>
+            </div>
+            <div class="highlight-card">
+                <span class="card-icon">💳</span>
+                <div class="card-title content-en">StoreKit Encrypted</div>
+                <div class="card-title content-ar">حماية StoreKit المشفرة</div>
+                <div class="card-desc content-en">100% of payments are handled directly by Apple StoreKit. We hold no card data.</div>
+                <div class="card-desc content-ar">تتم كافة المشتريات بأمان عبر Apple StoreKit دون تخزين أي بطاقات لدينا.</div>
+            </div>
+            <div class="highlight-card">
+                <span class="card-icon">🗑️</span>
+                <div class="card-title content-en">Instant Account Erasure</div>
+                <div class="card-title content-ar">حذف فوري للحساب</div>
+                <div class="card-desc content-en">1-click automated account and cloud progression wipe directly from settings.</div>
+                <div class="card-desc content-ar">إمكانية حذف الحساب والبيانات السحابية بالكامل فوراً وبضغطة زر.</div>
+            </div>
+            <div class="highlight-card">
+                <span class="card-icon">👶</span>
+                <div class="card-title content-en">Child Safe & COPPA</div>
+                <div class="card-title content-ar">أمان الأطفال COPPA</div>
+                <div class="card-desc content-en">Fully compliant with international children's privacy standards.</div>
+                <div class="card-desc content-ar">التزام صارم بمعايير حماية خصوصية الأطفال الدولية والمحلية.</div>
+            </div>
+        </div>
+
+        <!-- Main Privacy Policy Content -->
+        <main class="content-box">
+            <!-- ================= ENGLISH CONTENT ================= -->
+            <div class="content-en">
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">1</span>
+                        <h2>Introduction & Overview</h2>
+                    </div>
+                    <p>Welcome to <strong>QIVO: 8 Ball Pool Billiards</strong> ("QIVO", "the Game", "we", "our", or "us"). This Privacy Policy describes how we handle, protect, and process data when you download, install, play, or make purchases within QIVO on iOS (Apple App Store) and Android (Google Play Store).</p>
+                    <p>We are dedicated to safeguarding your privacy in strict compliance with the <strong>Apple App Store Review Guidelines (Guideline 5.1)</strong>, the <strong>Google Play Developer Policy</strong>, the <strong>General Data Protection Regulation (GDPR)</strong>, the <strong>California Consumer Privacy Act (CCPA/CPRA)</strong>, and the <strong>Children's Online Privacy Protection Act (COPPA)</strong>.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">2</span>
+                        <h2>Information We Collect & Why</h2>
+                    </div>
+                    <p>QIVO collects minimal data required to deliver realistic multiplayer billiards physics, cross-device cloud progress, global rankings, and tournament rewards:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Data Elements</th>
+                                <th>Purpose & Basis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Authentication & Profile</strong></td>
+                                <td>Player ID, Gamer Tag, Avatar URL, Email (when using Apple Sign-In or Google Sign-In)</td>
+                                <td>Account synchronization, player identity, and tournament bracket pairing.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Game Progression</strong></td>
+                                <td>Coins, Cash, unlocked cues, win/loss stats, tournament trophies, season pass tier</td>
+                                <td>Cloud saving via Firebase Cloud Firestore to prevent progress loss across devices.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gaming Services</strong></td>
+                                <td>Player ID and High Scores submitted to Apple Game Center / Google Play Games</td>
+                                <td>Publishing official global and weekly league leaderboards & unlocking achievements.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Technical & Crash Diagnostics</strong></td>
+                                <td>Device model, OS version, frame rate metrics, crash reports</td>
+                                <td>Ensuring smooth 60/120 FPS physics simulation and game stability.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout gold">
+                        <div class="callout-title">Playing as Guest / Offline Mode</div>
+                        <p>You can enjoy QIVO without linking any social or email account. In Guest mode, a randomized identifier is created locally on your device with zero personal data transmitted.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">3</span>
+                        <h2>In-App Purchases & Financial Billing</h2>
+                    </div>
+                    <p>QIVO offers optional virtual goods including coins, cash packs, custom cues, and the Royal Golden VIP Pass.</p>
+                    <ul>
+                        <li><strong>iOS Transactions:</strong> Handled exclusively by <strong>Apple StoreKit</strong> through your Apple ID account.</li>
+                        <li><strong>Android Transactions:</strong> Handled exclusively by <strong>Google Play Billing</strong>.</li>
+                        <li><strong>Zero Financial Storage:</strong> We do NOT collect, view, process, or store credit card numbers, banking details, or billing addresses.</li>
+                        <li><strong>Restore Purchases:</strong> In compliance with Apple Guideline 3.1.1, you can restore all previously purchased non-consumables (such as the VIP Pass) anytime via the "RESTORE PURCHASES" button located inside the in-game Royal Store.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">4</span>
+                        <h2>Third-Party Service Providers</h2>
+                    </div>
+                    <p>We work with industry-standard, certified infrastructure partners who adhere to rigorous security standards:</p>
+                    <ul>
+                        <li><strong>Apple Inc. (iOS Services):</strong> Apple Sign-In, Game Center (GameKit), and StoreKit. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</li>
+                        <li><strong>Google LLC (Firebase & Play Services):</strong> Firebase Authentication, Cloud Firestore (database), Google Play Games. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+                        <li><strong>Meta Platforms, Inc. (Optional):</strong> Facebook Login for challenging friends. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a>.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">5</span>
+                        <h2>Mandatory Account & Data Deletion</h2>
+                    </div>
+                    <p>In accordance with <strong>Apple App Store Guideline 5.1.1(v)</strong> and privacy laws, you possess the unconditional right to delete your account and all associated data permanently.</p>
+                    <div class="callout">
+                        <div class="callout-title">How to Delete Your Data:</div>
+                        <p><strong>1. Inside the App:</strong> Go to Profile > Cloud Save Settings > tap <em>"Delete Account & Wipe Cloud Progress"</em>.<br>
+                        <strong>2. Via Email Request:</strong> Send an email to <a href="mailto:support@qivo.app?subject=Account%20Deletion%20Request">support@qivo.app</a> with your Player ID or registered email. All cloud data, wallet balances, and match history will be permanently deleted from our servers within 14 business days.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">6</span>
+                        <h2>Children's Privacy Protection (COPPA)</h2>
+                    </div>
+                    <p>QIVO is designed as a general-audience billiards sports simulation. We do not knowingly collect personal information from children under the age of 13 (or under 16 in the European Economic Area). If we become aware that a child under 13 has provided personal data without parental consent, we will promptly delete such data from our databases.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">7</span>
+                        <h2>Data Security & Encryption</h2>
+                    </div>
+                    <p>We implement multi-layered security measures including:</p>
+                    <ul>
+                        <li>All network communications between the Game and servers are encrypted using Transport Layer Security (TLS 1.3 / HTTPS).</li>
+                        <li>Access to Cloud Firestore databases is protected by granular, role-based Firebase Security Rules ensuring players can only access their authorized profile records.</li>
+                        <li>No sensitive auth tokens or passwords are ever stored in plain text.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">8</span>
+                        <h2>Contact Information</h2>
+                    </div>
+                    <p>If you have any questions, inquiries, or data privacy requests regarding this Privacy Policy, please reach out to our dedicated support team:</p>
+                    <div class="callout gold">
+                        <p><strong>Entity:</strong> QIVO Games Studio<br>
+                        <strong>Email:</strong> <a href="mailto:support@qivo.app">support@qivo.app</a><br>
+                        <strong>Developer Portal:</strong> <a href="https://github.com/ferdayounes-oss" target="_blank" rel="noopener">github.com/ferdayounes-oss</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= ARABIC CONTENT ================= -->
+            <div class="content-ar">
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">١</span>
+                        <h2>مقدمة ونظرة عامة</h2>
+                    </div>
+                    <p>أهلاً بك في <strong>كيفو: بلياردو 8 كرات (QIVO: 8 Ball Pool Billiards)</strong> ("كيفو" أو "اللعبة" أو "نحن"). توضح سياسة الخصوصية هذه كيفية تعاملنا مع بياناتك وحمايتها عند تحميل اللعبة أو اللعب أو الشراء داخل التطبيق عبر أجهزة iOS (Apple App Store) وأندرويد (Google Play Store).</p>
+                    <p>نحن ملتزمون التزاماً تاماً بحماية خصوصيتك وفقاً لـ <strong>إرشادات متجر آبل App Store (المعيار 5.1)</strong>، وسياسات <strong>Google Play</strong>، واللائحة العامة لحماية البيانات <strong>(GDPR)</strong>، وقانون خصوصية المستهلك في كاليفورنيا <strong>(CCPA)</strong>، وقانون حماية خصوصية الأطفال على الإنترنت <strong>(COPPA)</strong>.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٢</span>
+                        <h2>البيانات التي نجمعها وأسباب جمعها</h2>
+                    </div>
+                    <p>تجمع لعبة QIVO الحد الأدنى من البيانات التقنية اللازمة لتوفير تجربة بلياردو واقعية متعددة اللاعبين وحفظ تقدمك عبر السحابة:</p>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>نوع البيانات</th>
+                                <th>تفاصيل البيانات</th>
+                                <th>الغرض القانوني</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>بيانات الحساب والملف</strong></td>
+                                <td>معرف اللاعب (Player ID)، الاسم المستعار، الصورة الشخصية، البريد الإلكتروني (عند الدخول عبر Apple أو Google)</td>
+                                <td>مزامنة الحساب، تحديد هوية اللاعب في البطولات، وترتيب المباريات.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>تقدم اللعبة والجوائز</strong></td>
+                                <td>رصيد العملات والذهب، العصي المفتوحة، إحصائيات الفوز والخسارة، تقدم تذكرة الموسم</td>
+                                <td>الحفظ السحابي عبر Firebase Firestore لضمان عدم ضياع تقدمك عند تغيير جهازك.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>خدمات الألعاب الرسمية</strong></td>
+                                <td>النقاط والإنجازات المرسلة إلى Apple Game Center أو Google Play Games</td>
+                                <td>عرض اسمك في لوائح الصدارة العالمية والأسبوعية وفتح إنجازات اللعبة.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>بيانات التشخيص والأداء</strong></td>
+                                <td>طراز الجهاز، إصدار النظام، معدل الإطارات وتقارير الأعطال البرمجية</td>
+                                <td>ضمان استقرار محرك الفيزياء بسرعة 60/120 إطاراً في الثانية ومنع التوقف المفاجئ.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout gold">
+                        <div class="callout-title">اللعب كضيف / اللعب بدون إنترنت</div>
+                        <p>يمكنك الاستمتاع بلعبة QIVO بالكامل دون تسجيل الدخول أو ربط أي بريد إلكتروني. في وضع الضيف (Guest)، يُنشأ معرف عشوائي محلياً على جهازك دون إرسال أي بيانات شخصية.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٣</span>
+                        <h2>المشتريات داخل التطبيق وأمان المدفوعات</h2>
+                    </div>
+                    <p>توفر اللعبة عناصر افتراضية اختيارية (حزم الذهب، العملات، العصي الأسطورية، وتذكرة الـ VIP الذهبية الملكية):</p>
+                    <ul>
+                        <li><strong>مدفوعات أجهزة iOS:</strong> تتم معالجتها حصرياً عبر نظام <strong>Apple StoreKit</strong> المشفر التابع لشركة آبل وبواسطة حساب Apple ID الخاص بك.</li>
+                        <li><strong>مدفوعات أجهزة Android:</strong> تتم معالجتها حصرياً عبر <strong>Google Play Billing</strong>.</li>
+                        <li><strong>عدم تخزين البيانات المالية:</strong> نحن لا نطلع ولا نستلم ولا نخزن نهائياً أي أرقام بطاقات ائتمانية أو بيانات بنكية.</li>
+                        <li><strong>استعادة المشتريات (Restore Purchases):</strong> التزاماً بإرشادات Apple، يمكنك في أي وقت استعادة مشترياتك الدائمة (مثل تذكرة VIP) بضغطة زر واحدة عبر زر "استعادة المشتريات (RESTORE PURCHASES)" في متجر اللعبة.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٤</span>
+                        <h2>الخدمات والشركاء المعتمدون</h2>
+                    </div>
+                    <p>نعتمد حصرياً على بنية تحتية سحابية موثوقة وعالمية:</p>
+                    <ul>
+                        <li><strong>شركة Apple Inc.:</strong> لخدمات Apple Sign-In و Game Center (GameKit) ونظام المدفوعات StoreKit.</li>
+                        <li><strong>شركة Google LLC:</strong> لخدمات Firebase Authentication وقواعد بيانات Cloud Firestore و Google Play Games.</li>
+                        <li><strong>شركة Meta Platforms, Inc. (اختياري):</strong> لتسجيل الدخول بفيسبوك لمنافسة الأصدقاء فقط.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٥</span>
+                        <h2>الحق الإلزامي في حذف الحساب والبيانات</h2>
+                    </div>
+                    <p>التزاماً بلائحة Apple الصارمة <strong>(Guideline 5.1.1(v))</strong> وقوانين حماية البيانات، يحق لك بشكل مطلق طلب حذف حسابك وكافة بياناتك بصورة نهائية ودائمة في أي وقت.</p>
+                    <div class="callout">
+                        <div class="callout-title">طريقة حذف حسابك وبياناتك:</div>
+                        <p><strong>١. من داخل اللعبة مباشرة:</strong> الملف الشخصي > سحابة الحفظ > اختر <em>"حذف الحساب ومسح كافة البيانات"</em>.<br>
+                        <strong>٢. عبر البريد الإلكتروني:</strong> راسلنا على <a href="mailto:support@qivo.app?subject=%D8%B7%D9%84%D8%A8%20%D8%AD%D8%B0%D9%81%20%D8%A7%D9%84%D8%AD%D8%B3%D8%A7%D8%A8">support@qivo.app</a> مع ذكر معرّف اللاعب (Player ID) وسيتم مسح كافة البيانات السحابية وسجل المباريات نهائياً في غضون 14 يوم عمل.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٦</span>
+                        <h2>حماية خصوصية الأطفال (COPPA)</h2>
+                    </div>
+                    <p>لعبة QIVO مخصصة للجمهور العام من محبي رياضة البلياردو. نحن لا نجمع عن عمد أي بيانات شخصية من الأطفال دون سن 13 عاماً (أو دون سن 16 عاماً في الاتحاد الأوروبي). وفي حال تبيّن لنا تزويدنا بأي بيانات لطفل دون موافقة ولي الأمر، فإننا نحذفها فوراً من خوادمنا.</p>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٧</span>
+                        <h2>أمان البيانات والتشفير</h2>
+                    </div>
+                    <p>نطبق أعلى المعايير الأمنية لحماية بياناتك:</p>
+                    <ul>
+                        <li>تشفير تام لجميع الاتصالات بين اللعبة والخوادم عبر بروتوكول TLS 1.3 المشفر (HTTPS).</li>
+                        <li>قواعد أمان سحابية صارمة (Firebase Security Rules) تمنع أي لاعب من قراءة أو تعديل بيانات أي لاعب آخر.</li>
+                        <li>عدم حفظ أي كلمات مرور أو مفاتيح حساسة بصيغة نصية مجردة إطلاقاً.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-num">٨</span>
+                        <h2>معلومات التواصل والمطور</h2>
+                    </div>
+                    <p>لأي أسئلة أو استفسارات تتعلق بسياسة الخصوصية أو بياناتك الشخصية، يسعدنا التواصل معك:</p>
+                    <div class="callout gold">
+                        <p><strong>الجهة المطورة:</strong> QIVO Games Studio<br>
+                        <strong>البريد الإلكتروني:</strong> <a href="mailto:support@qivo.app">support@qivo.app</a><br>
+                        <strong>رابط المطور الرسمي:</strong> <a href="https://github.com/ferdayounes-oss" target="_blank" rel="noopener">github.com/ferdayounes-oss</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 QIVO Games Studio. All rights reserved.</p>
+            <p style="margin-top: 6px; font-size: 0.8rem;">QIVO: 8 Ball Pool Billiards &bull; Built with Precision & Royal Elegance</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            const body = document.body;
+            const btnEn = document.getElementById('btn-en');
+            const btnAr = document.getElementById('btn-ar');
+
+            if (lang === 'ar') {
+                body.classList.add('lang-ar');
+                body.setAttribute('dir', 'rtl');
+                btnAr.classList.add('active');
+                btnEn.classList.remove('active');
+            } else {
+                body.classList.remove('lang-ar');
+                body.setAttribute('dir', 'ltr');
+                btnEn.classList.add('active');
+                btnAr.classList.remove('active');
+            }
+        }
+
+        // Auto-detect browser language or URL hash
+        window.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (window.location.hash === '#ar' || userLang.startsWith('ar')) {
+                setLang('ar');
+            }
+        });
+    </script>
+</body>
+</html>
